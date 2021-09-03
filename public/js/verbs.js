@@ -10,11 +10,12 @@ all.forEach(element => element.addEventListener('input',(e)=>{
     }));
 
    
-    
 
     (function($) {
 
-    // Show lekci a ukaž další
+       
+
+    // Ukaž zvolenou lekci a schovej ostatní
                $('.dropdown-menu li').on('click',function(){
                 var eq = $(this).index();
                 

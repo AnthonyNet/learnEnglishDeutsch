@@ -28,12 +28,18 @@
 <% const wortschatz1050 = bleblu.wortschatz21%>
 <% const wortschatz1100 = bleblu.wortschatz22%>
 
+
+
 <section class="mb-5">
 <div class="dropdown text-center mt-5">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     Vyber lekci
   </button>
   <button class="btn btn-secondary" id="showAllIrregular">Ukaž vše</button>
+  <button class="btn btn-secondary" id="random"><a class="btn btn-primary" href="#carouselExampleControls" role="button">Link</a></button>
+
+
+
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 
     
@@ -92,7 +98,7 @@
   <div class="container">
 
 <% let giveMe50Words = (words, x) => { %>
-
+ 
     <div class="row mb-5 hideJQ">
         <div class="cover ">
        
@@ -105,7 +111,7 @@
       
               
               <div class="text-center">
-                <h1>Irregular Verbs exercise</h1>
+                <h1>Deutsch Wortschatz Übung</h1>
               </div>
       
             </div>
@@ -149,9 +155,9 @@
 </div>
 <% } %>
 
-<% giveMe50Words(wortschatz50, 50) %>
-<% giveMe50Words(wortschatz100, 100) %>
-<% giveMe50Words(wortschatz150, 150) %>
+<% giveMe50Words(wortschatz50, 1) %>
+<% giveMe50Words(wortschatz100, 2) %>
+<% giveMe50Words(wortschatz150, 3) %>
 <% giveMe50Words(wortschatz200, 200) %>
 <% giveMe50Words(wortschatz250, 250) %>
 <% giveMe50Words(wortschatz300, 300) %>

@@ -9,4 +9,14 @@
 .answerCard:active{
     color: rgb(255,0,0);
     font-weight: bold;
+    cursor:help;
+}
+
+
+
+@media (max-width: 545px) { 
+    .table{
+        font-size: 1rem;
+    }
+    
 }

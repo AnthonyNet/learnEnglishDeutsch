@@ -15,7 +15,7 @@ app.set('views', path.join(__dirname, '/views'))
 
 app.get('/',(req, res) => {
 
-    res.render('home', {jsonData})
+    res.render('english/irregularExercise1', {jsonData})
 })
 
 app.get('/english/irregularTable', (req, res) => {
