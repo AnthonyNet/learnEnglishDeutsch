@@ -1,0 +1,12 @@
+.hide{
+    display: none;
+}
+.answerCard{
+    color: rgb(555,555,555, 0);
+}
+
+.answerCard:hover,
+.answerCard:active{
+    color: rgb(255,0,0);
+    font-weight: bold;
+}

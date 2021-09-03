@@ -1,0 +1,143 @@
+<%- include('../partials/header') %>
+
+<%- include('../partials/navbar') %>
+
+<div class="dropdown text-center mt-5">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Vyber lekci
+  </button>
+  <button class="btn btn-secondary" id="showAllIrregular">Ukaž vše</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+    <li class="p-1"><a class="dropdown-item" href="#vzniknout">1-10</a></li>
+    <li class="p-1"><a class="dropdown-item" href="#vzniknout">11-20</a></li>
+    </li>
+    <li class="p-1"><a class="dropdown-item" href="#vzniknout">21-30</a></li>
+  </li>
+  <li class="p-1"><a class="dropdown-item" href="#vzniknout">31-40</a></li>
+    </li>
+    <li class="p-1"><a class="dropdown-item" href="#vzniknout">41-50</a></li>
+    </li>
+    <li class="p-1"><a class="dropdown-item" href="#vzniknout">51-60</a></li>
+    </li>
+    <li class="p-1"><a class="dropdown-item" href="#vzniknout">61-70</a></li>
+    </li>
+    <li class="p-1"><a class="dropdown-item" href="#vzniknout">71-80</a></li>
+    </li>
+    <li class="p-1"><a class="dropdown-item" href="#vzniknout">81-90</a></li>
+    </li>
+    <li class="p-1"><a class="dropdown-item" href="#vzniknout">91-100</a></li>
+    </li>
+    <li class="p-1"><a class="dropdown-item" href="#vzniknout">101-110</a></li>
+    </li>
+    <li class="p-1"><a class="dropdown-item" href="#vzniknout">111-120</a></li>
+    </li>
+    <li class="p-1"><a class="dropdown-item" href="#vzniknout">121-130</a></li>
+    </li>
+    <li class="p-1"><a class="dropdown-item" href="#vzniknout">131-136</a></li>
+    </li>
+
+  </ul>
+</div>
+
+
+
+  
+</div>
+
+</section>
+
+
+
+<section class=" text-light mt-5">
+    <div class="container">
+        
+  
+            
+        
+
+<% const pokusVerbs = jsonData.verbs; %>
+
+<% let createCarousels = (x, y, pokus) => { %>
+  
+<div class="row mb-5 hideJQ">
+  <div class="cover ">
+ 
+
+
+
+<div id="carouselExampleControls<%= y %>" class="carousel slide text-primary bg-dark p-5 d-flex align-items-center justify-content-center " data-bs-ride="false" style="height: 90vh;">
+    <div class="carousel-inner ">
+      <div class="carousel-item active ">
+
+        
+        <div class="text-center">
+          <h1>Irregular Verbs exercise <%=x%> - <%=y%></h1>
+        </div>
+
+      </div>
+
+
+    
+    <%  for (let index = x; index <= y; index++) { %>
+
+        <div class="carousel-item">
+
+          <h1 class="text-center">Slovo #<%=index%></h1>
+
+            <div class="card cardIrr text-center" style="width: 18rem; margin: 0 auto;" id="<%= pokus[index].cz %>">
+                <div class="card-header">
+                  <h3 class=" text-primary mb-1"><%= pokus[index].cz %></h3>
+                
+            </div>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><input id="slovo_ID" data-verb="<%= pokus[index].base %>" type="text"></li>
+                <li class="list-group-item"><input id="slovo_ID" data-verb="<%= pokus[index].pastSimple %>" type="text"></li>
+                <li class="list-group-item"><input id="slovo_ID" data-verb="<%= pokus[index].pastParticiple %>" type="text" ></li>
+                <li class="list-group-item">Správná odpověď:</li>
+                <li class="list-group-item answerCard"><%= pokus[index].base %> <%= pokus[index].pastSimple %> <%= pokus[index].pastParticiple %></li>
+          </ul>
+        </div>
+
+  </div>
+
+       <% } %>
+    
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls<%= y %>" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls<%= y %>" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </div>
+  </div>
+  
+  <% } %>
+
+  <% createCarousels(0, 10, pokusVerbs) %>
+  <% createCarousels(11, 20, pokusVerbs) %>
+  <% createCarousels(21, 30, pokusVerbs) %>
+  <% createCarousels(31, 40, pokusVerbs) %>
+  <% createCarousels(41, 50, pokusVerbs) %>
+  <% createCarousels(51, 60, pokusVerbs) %>
+  <% createCarousels(61, 70, pokusVerbs) %>
+  <% createCarousels(71, 80, pokusVerbs) %>
+  <% createCarousels(81, 90, pokusVerbs) %>
+  <% createCarousels(91, 100, pokusVerbs) %>
+  <% createCarousels(101, 110, pokusVerbs) %>
+  <% createCarousels(111, 120, pokusVerbs) %>
+  <% createCarousels(121, 130, pokusVerbs) %>
+  <% createCarousels(131, 136, pokusVerbs) %>
+
+    </div>
+</section>
+
+
+
+<%- include('../partials/footer') %>
+

@@ -1,0 +1,123 @@
+<%- include('../partials/header') %>
+
+<%- include('../partials/navbar') %>
+
+
+
+
+<% const wortschatz50 = bleblu.wortschatz1%>
+<% const wortschatz100 = bleblu.wortschatz2%>
+<% const wortschatz150 = bleblu.wortschatz3%>
+<% const wortschatz200 = bleblu.wortschatz4%>
+<% const wortschatz250 = bleblu.wortschatz5%>
+<% const wortschatz300 = bleblu.wortschatz6%>
+<% const wortschatz350 = bleblu.wortschatz7%>
+<% const wortschatz400 = bleblu.wortschatz8%>
+<% const wortschatz450 = bleblu.wortschatz9%>
+<% const wortschatz500 = bleblu.wortschatz10%>
+<% const wortschatz550 = bleblu.wortschatz11%>
+<% const wortschatz600 = bleblu.wortschatz12%>
+<% const wortschatz650 = bleblu.wortschatz13%>
+<% const wortschatz700 = bleblu.wortschatz14%>
+<% const wortschatz750 = bleblu.wortschatz15%>
+<% const wortschatz800 = bleblu.wortschatz16%>
+<% const wortschatz850 = bleblu.wortschatz17%>
+<% const wortschatz900 = bleblu.wortschatz18%>
+<% const wortschatz950 = bleblu.wortschatz19%>
+<% const wortschatz1000 = bleblu.wortschatz20%>
+<% const wortschatz1050 = bleblu.wortschatz21%>
+<% const wortschatz1100 = bleblu.wortschatz22%>
+
+<% let giveMe50Words = (words, x) => { %>
+
+    <div class="row mb-5 hideJQ">
+        <div class="cover ">
+       
+      
+      
+      
+      <div id="carouselExampleControls<%=x%>" class="carousel slide text-primary bg-dark p-5 d-flex align-items-center justify-content-center " data-bs-ride="false" style="height: 90vh;">
+          <div class="carousel-inner ">
+            <div class="carousel-item active ">
+      
+              
+              <div class="text-center">
+                <h1>Irregular Verbs exercise</h1>
+              </div>
+      
+            </div>
+
+
+<% for (let index = 0; index <words.length; index++) { %>
+    <div class="carousel-item">
+
+        <h1 class="text-center">Slovo #<%=index+1%></h1>
+
+          <div class="card cardIrr text-center" style="width: 18rem; margin: 0 auto;" id="<%= words[index].cz %>">
+              <div class="card-header">
+                <h3 class=" text-primary mb-1"><%=words[index].cz%></h3>
+              
+          </div>
+
+          <ul class="list-group list-group-flush">
+              
+              <li class="list-group-item">Správná odpověď:</li>
+              <li class="list-group-item answerCard"><%= words[index].de%></li>
+        </ul>
+      </div>
+
+</div>
+<% } %>
+
+
+
+
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls<%=x%>" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls<%=x%>" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+</div>
+</div>
+</div>
+<% } %>
+
+<% giveMe50Words(wortschatz50, 50) %>
+<% giveMe50Words(wortschatz100, 100) %>
+<% giveMe50Words(wortschatz150, 150) %>
+<% giveMe50Words(wortschatz200, 200) %>
+<% giveMe50Words(wortschatz250, 250) %>
+<% giveMe50Words(wortschatz300, 300) %>
+<% giveMe50Words(wortschatz350, 350) %>
+<% giveMe50Words(wortschatz400, 400) %>
+<% giveMe50Words(wortschatz450, 450) %>
+<% giveMe50Words(wortschatz500, 500) %>
+<% giveMe50Words(wortschatz550, 550) %>
+<% giveMe50Words(wortschatz600, 600) %>
+<% giveMe50Words(wortschatz650, 650) %>
+<% giveMe50Words(wortschatz700, 700) %>
+<% giveMe50Words(wortschatz750, 750) %>
+<% giveMe50Words(wortschatz800, 800) %>
+<% giveMe50Words(wortschatz850, 850) %>
+<% giveMe50Words(wortschatz900, 900) %>
+<% giveMe50Words(wortschatz950, 950) %>
+<% giveMe50Words(wortschatz1000, 1000) %>
+<% giveMe50Words(wortschatz1050, 1050) %>
+<% giveMe50Words(wortschatz1100, 1100) %>
+
+
+
+
+
+    
+
+ 
+
+
+<%- include('../partials/footer') %>
+
+

@@ -1,0 +1,34 @@
+<%- include('../partials/header') %>
+
+<%- include('../partials/navbar') %>
+
+<section class=" text-light mt-5 p-5 ">
+    <div class="container">
+        <div class="row">
+            
+            
+        
+
+<h1>Home</h1>
+
+<table class="table table-hover">
+    
+<% for( let verbs of jsonData.verbs) { %>
+    <tr>
+<td> <%= verbs.cz %> </td>
+<td> <%= verbs.base %> </td>
+<td> <%= verbs.pastSimple %> </td>
+<td> <%= verbs.pastParticiple %> </td>
+
+</tr>
+<% } %>
+
+</table>
+
+
+</div>
+</div>
+ </section>
+
+<%- include('../partials/footer') %>
+
