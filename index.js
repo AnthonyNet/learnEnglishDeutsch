@@ -3,8 +3,10 @@ const app = express();
 const path = require('path');
 
 let jsonData = require('./public/json/irregular_verbs.json');
-let jsonDeutschWortschatz = require('./public/json/deutschWortschatz1.json');
-let wortschatz1 = require('./public/json/wortschatz1.json');
+/*let jsonDeutschWortschatz = require('./public/json/deutschWortschatz1.json');
+let wortschatz1 = require('./public/json/wortschatz1.json');*/
+let jsonDeutschWortschatz = require('./public/json/pokus.json');
+let wortschatz1 = require('./public/json/pokus.json')
 /*
 app.use(express.static('public'))
 */
