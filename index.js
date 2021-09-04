@@ -4,7 +4,7 @@ const path = require('path');
 
 let jsonData = require('./public/json/irregular_verbs.json');
 let jsonDeutschWortschatz = require('./public/json/deutschWortschatz1.json');
-let bleblu = require('./public/json/pokus.json');
+let wortschatz1 = require('./public/json/wortschatz1.json');
 
 app.use(express.static('public'))
 
@@ -28,7 +28,7 @@ app.get('/english/irregularExercise1', (req, res) => {
 })
 
 app.get('/deutsch/wortschatz1', (req, res) => {
-    res.render('deutsch/wortschatz1', {jsonDeutschWortschatz, bleblu})
+    res.render('deutsch/wortschatz1', {jsonDeutschWortschatz, wortschatz1})
 })
 
 app.listen( 3000, () => {
