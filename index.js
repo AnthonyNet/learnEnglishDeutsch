@@ -6,12 +6,7 @@ let jsonData = require('./public/json/irregular_verbs.json');
 let jsonDeutschWortschatz = require('./public/json/deutschWortschatz1.json');
 let wortschatz1 = require('./public/json/wortschatz1.json');
 
-app.use(express.static(__dirname + "/public", {
-    index: false, 
-    immutable: true, 
-    cacheControl: true,
-    maxAge: "30d"
-}));
+app.use(express.static('public'))
 
 
 
