@@ -451,7 +451,8 @@
       },
       {
          "cz":"zotavení, odpočinek",
-         "de":"die Erholung die Erholungen"
+         "de":"die Erholung",
+         "plural": "die Erholungen"
       },
       {
          "cz":"připomenout, pamatovat",
@@ -459,7 +460,8 @@
       },
       {
          "cz":"vzpomínka",
-         "de":"die Erinnerung die Erinnerungen"
+         "de":"die Erinnerung",
+         "plural": "die Erinnerungen"
       },
       {
          "cz":"nachladit, chladnout",
@@ -475,7 +477,8 @@
       },
       {
          "cz":"nachlazení",
-         "de":"die Erkältung die Erkältungen"
+         "de":"die Erkältung",
+         "plural": "die Erkältungen"
       },
       {
          "cz":"poznat, rozeznat",
@@ -499,7 +502,8 @@
       },
       {
          "cz":"zážitek",
-         "de":"das Erlebnis die Erlebnisse"
+         "de":"das Erlebnis",
+         "plural": "die Erlebnisse"
       },
       {
          "cz":"vyřídit",
@@ -511,7 +515,8 @@
       },
       {
          "cz":"sleva",
-         "de":"die Ermäßigung die Ermäßigungen"
+         "de":"die Ermäßigung",
+         "plural": "die Ermäßigungen"
       },
       {
          "cz":"vyživovat, uživit",
@@ -527,7 +532,8 @@
       },
       {
          "cz":"sklizeň, úroda",
-         "de":"die Ernte die Ernten"
+         "de":"die Ernte",
+         "plural": "die Ernten"
       },
       {
          "cz":"otevřít (obchod, konto)",
@@ -535,7 +541,8 @@
       },
       {
          "cz":"otevření, zahájení",
-         "de":"die Eröffnungdie Eroffnungen"
+         "de":"die Eröffnungdie",
+         "plural": "die Eröffnungen"
       },
       {
          "cz":"stihnout, dosáhnout",
@@ -567,7 +574,8 @@
       },
       {
          "cz":"dospělí",
-         "de":"der Erwachsene die Erwachsenen"
+         "de":"der Erwachsene",
+         "plural": "die Erwachsenen"
       },
       {
          "cz":"očekávat",
@@ -587,7 +595,8 @@
       },
       {
          "cz":"poschodí, patro",
-         "de":"die Etage die Etagen"
+         "de":"die Etage",
+         "plural": "die Etagen"
       },
       {
          "cz":"patro",
@@ -599,7 +608,8 @@
       },
       {
          "cz":"polička, předmět",
-         "de":"das Fach die Fächer"
+         "de":"das Fach",
+         "plural": "die Fächer"
       },
       {
          "cz":"odborník",
@@ -611,21 +621,25 @@
       },
       {
          "cz":"schopnost, dovednost",
-         "de":"die Fähigkeit die Fähigkeiten"
+         "de":"die Fähigkeit",
+         "plural": "die Fähigkeiten"
       },
       {
          "cz":"trajekt, převoz",
-         "de":"die Fähre die Fahren"
+         "de":"die Fähre",
+         "plural": "die Fahren"
       },
       {
          "cz":"vozovka",
-         "de":"die Fahrbahn die Fahrbanen"
+         "de":"die Fahrbahn",
+         "plural": "die Fahrbanen"
       }
    ],
    "wortschatz4":[
       {
          "cz":"pád",
-         "de":"der Fall die Fälle"
+         "de":"der Fall",
+         "plural": "die Fälle"
       },
       {
          "cz":"splatný",
@@ -645,7 +659,8 @@
       },
       {
          "cz":"masopust",
-         "de":"der Fasching die Fasnacht"
+         "de":"der Fasching",
+         "plural": "die Fasnacht"
       },
       {
          "cz":"chytit, udělat rozhodnutí",
@@ -657,15 +672,17 @@
       },
       {
          "cz":"křeslo",
-         "de":"der Fauteuil der Sessel"
+         "de":"der Sessel"
       },
       {
          "cz":"pole",
-         "de":"das Feld die Felder"
+         "de":"das Feld",
+         "plural": "die Felder"
       },
       {
          "cz":"dálkové ovládání",
-         "de":"die Fernbedienung die Fernbedienungen"
+         "de":"die Fernbedienung",
+         "plural": "die Fernbedienungen"
       },
       {
          "cz":"pevně, silně",
@@ -673,11 +690,13 @@
       },
       {
          "cz":"oslava, slavnost",
-         "de":"das Fest die Festen"
+         "de":"das Fest",
+         "plural": "die Festen"
       },
       {
          "cz":"harddisk",
-         "de":"die Festplatte die Festplatten"
+         "de":"die Festplatte",
+         "plural": "die Festplatten"
       },
       {
          "cz":"Zadržet, držet",
@@ -713,11 +732,13 @@
       },
       {
          "cz":"zapalovač",
-         "de":"das Feuerzeug die Feuerzeuge"
+         "de":"das Feuerzeug",
+         "plural": "die Feuerzeuge"
       },
       {
          "cz":"hasiči",
-         "de":"die Feuerwehr die Feuerwehren"
+         "de":"die Feuerwehr",
+         "plural": "die Feuerwehren"
       },
       {
          "cz":"horečka",
@@ -729,11 +750,13 @@
       },
       {
          "cz":"plocha, rovina",
-         "de":"die Fläche die Flächen"
+         "de":"die Fläche",
+         "plural": "die Flächen"
       },
       {
          "cz":"flek",
-         "de":"der Fleck die Flecken"
+         "de":"der Fleck",
+         "plural": "die Flecken"
       },
       {
          "cz":"řezník",
@@ -753,23 +776,28 @@
       },
       {
          "cz":"bleší trh",
-         "de":"der Flohmarkt die Flohmärkte"
+         "de":"der Flohmarkt", 
+         "plural": "die Flohmärkte"
       },
       {
          "cz":"chodba",
-         "de":"die Flur die Flure"
+         "de":"die Flur",
+         "plural": "die Flure"
       },
       {
          "cz":"řeka",
-         "de":"der Fluss die Flüsse"
+         "de":"der Fluss",
+         "plural": "die Flüsse"
       },
       {
          "cz":"kapalina",
-         "de":"die Flüssigkeit die Flüssigkeiten"
+         "de":"die Flüssigkeit",
+         "plural": "die Flüssigkeiten"
       },
       {
          "cz":"následek, díl seriálu",
-         "de":"die Folge die Folgen"
+         "de":"die Folge",
+         "plural": "die Folgen"
       },
       {
          "cz":"následující",
@@ -781,7 +809,8 @@
       },
       {
          "cz":"požadavek, pohledávka",
-         "de":"die Forderung die Forderungen"
+         "de":"die Forderung",
+         "plural": "die Forderungen"
       },
       {
          "cz":"podporovat",
@@ -789,19 +818,23 @@
       },
       {
          "cz":"podpora",
-         "de":"die Förderung die Förderugen"
+         "de":"die Förderung",
+         "plural": "die Förderugen"
       },
       {
          "cz":"výzkum",
-         "de":"die Forschung die Forschungen"
+         "de":"die Forschung",
+         "plural": "die Forschungen"
       },
       {
          "cz":"vzdělání, kvalifikace",
-         "de":"die Fortbildung die Fortbildungen"
+         "de":"die Fortbildung",
+         "plural": "die Fortbildungen"
       },
       {
          "cz":"pokrok",
-         "de":"der Fortschritt die Fortschritte"
+         "de":"der Fortschritt",
+         "plural": "die Fortschritte"
       },
       {
          "cz":"pokračovat",
@@ -809,11 +842,13 @@
       },
       {
          "cz":"léčba, ošetření",
-         "de":"die Behandlung die Behandlungen"
+         "de":"die Behandlung",
+         "plural": "die Behandlungen"
       },
       {
          "cz":"pokračování",
-         "de":"die Fortsetzung die Fortsetzungen"
+         "de":"die Fortsetzung",
+         "plural": "die Fortsetzungen"
       },
       {
          "cz":"drzý",
