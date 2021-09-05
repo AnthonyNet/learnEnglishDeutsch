@@ -2,7 +2,7 @@
     display: none;
 }
 .answerCard{
-    color: rgb(555,555,555, 0);
+    color: rgba(555,555,555, 0);
 }
 
 .answerCard:hover,
@@ -12,7 +12,9 @@
     cursor:help;
 }
 
-
+.carousel{
+    background-color: var(--color-red-ligth-1);
+}
 
 @media (max-width: 545px) { 
     .table{
