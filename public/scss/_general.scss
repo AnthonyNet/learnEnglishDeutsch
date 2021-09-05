@@ -13,10 +13,16 @@
 }
 
 .carousel{
-    background-color: var(--color-red-ligth-1);
+    background-color: var(--color-blue-dark-2);
 }
 
 @media (max-width: 545px) { 
+    .card{
+        width:  48vw !important;
+    }
+    .card input{
+        width: 80%;
+    }
     .table{
         font-size: 1rem;
     }
