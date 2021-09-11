@@ -1546,7 +1546,7 @@
          "cz":"bedna",
          "de":"der Kasten",
          "plural":"die Kästen",
-         "plural":"die Kiste"
+         "plural2":"die Kiste"
       },
       {
          "cz":"kupec",
@@ -1668,7 +1668,7 @@
          "cz":"nemocný, nemocná, nemocní",
          "de":"der Kranke",
          "plural":"die Kranke ",
-         "plural":"die Kranken"
+         "plural2":"die Kranken"
       },
       {
          "cz":"zdravotní pojišťovna",
@@ -1905,7 +1905,7 @@
       },
       {
          "cz":"jídlo",
-         "de":"Die Mahlzeit",
+         "de":"die Mahlzeit",
          "plural":"die Mahlzeiten"
       },
       {
@@ -2507,7 +2507,7 @@
       },
       {
          "cz":"rada, doporučení",
-         "de":"Der Ratschlag",
+         "de":"der Ratschlag",
          "plural":"die Ratschläge"
       },
       {
@@ -3027,7 +3027,7 @@
          "cz":"omáčka",
          "de":"die Soße",
          "plural":"die Sauce",
-         "plural":"die Soßen"
+         "plural2":"die Soßen"
       },
       {
          "cz":"pokud",
@@ -4365,10 +4365,9 @@
       },
       {
          "cz":"výdělek",
-         "de":"der Ve",
-         "plural":"dienst",
-         "plural":"die Ve",
-         "plural":"dienste"
+         "de":"der Verdienst",
+         "plural":"die Verdienste"
+         
       },
       {
          "cz":"dohoda",
