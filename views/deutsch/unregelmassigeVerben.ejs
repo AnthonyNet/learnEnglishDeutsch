@@ -7,49 +7,26 @@
     Vyber lekci
   </button>
   <button class="btn btn-secondary" id="showAllIrregular">Ukaž vše</button>
+
+  <!-- 
+    Create DropdownMenu
+    *its sorted alphabetically by 10 words for 1 menu folder
+  -->
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 
-    <li class="p-1"><a class="dropdown-item" href="#">1-10</a></li>
-    <li class="p-1"><a class="dropdown-item" href="#">11-20</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">21-30</a></li>
-  </li>
-  <li class="p-1"><a class="dropdown-item" href="#">31-40</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">41-50</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">51-60</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">61-70</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">71-80</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">81-90</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">91-100</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">101-110</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">111-120</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">121-130</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">131-140</a></li>
-    <li class="p-1"><a class="dropdown-item" href="#">141-150</a></li>
-    <li class="p-1"><a class="dropdown-item" href="#">151-160</a></li>
-    <li class="p-1"><a class="dropdown-item" href="#">160-173</a></li>
-    </li>
-    
+   <% let createGerDropdownMenu = () => { %>
+    <% for(let i=1; i<=160; i+=10){ %>
+      <li class="p-1"><a class="dropdown-item" href="#"><%= i %>-<%= i+9%></a></li>
+    <% } %>
+    <% } %>
 
+    <%= createGerDropdownMenu() %>
+
+    <li class="p-1"><a class="dropdown-item" href="#">160-173</a></li>
+
+    
   </ul>
 </div>
-
-
-
-  
-</div>
-
-</section>
 
 
 
@@ -60,9 +37,9 @@
             
         
 
-<% const engVerbs = unregelmassigeVerben.verben; %>
+<% const deVerben = unregelmassigeVerben.verben; %>
 
-<% let createCarousels = (x, y, pokus) => { %>
+<% let createCarousels = (x, y, verb) => { %>
   
 <div class="row mb-5 hideJQ">
   <div class="cover ">
@@ -76,7 +53,7 @@
 
         
         <div class="text-center">
-          <h1>Irregular Verbs exercise <%=x%> - <%=y%></h1>
+          <h1>Unregelmäßige Verben Übung: <%=x%> - <%=y%></h1>
         </div>
 
       </div>
@@ -89,21 +66,25 @@
 
           <h1 class="text-center">Slovo #<%=index%></h1>
 
-            <div class="card cardIrr text-center" style="width: 18rem; margin: 0 auto;" id="<%= pokus[index].cz %>">
+            <div class="card cardIrr text-center" style="width: 18rem; margin: 0 auto;" id="<%= verb[index].cz %>">
                 <div class="card-header">
-                  <h3 class=" text-primary mb-1"><%= pokus[index].cz %></h3>
+                  <h3 class=" text-primary mb-1"><%= verb[index].cz %>
+                    <%if(verb[index].cz2){%>-
+                      <%=verb[index].cz2%> 
+                    <% } %>
+                  </h3>
                 
             </div>
 
             <ul class="list-group list-group-flush">
               <li class="list-group-item">Infinitive:</li>
-                <li class="list-group-item"><input id="slovo_ID" data-verb="<%= pokus[index].infinitive %>" type="text"></li>
+                <li class="list-group-item"><input id="slovo_ID" data-verb="<%= verb[index].infinitive %>" type="text"></li>
                 <li class="list-group-item">Präteritum:</li>
-                <li class="list-group-item"><input id="slovo_ID" data-verb="<%= pokus[index].pastTense %>" type="text"></li>
+                <li class="list-group-item"><input id="slovo_ID" data-verb="<%= verb[index].pastTense %>" type="text"></li>
                 <li class="list-group-item">Perfektum:</li>
-                <li class="list-group-item"><input id="slovo_ID" data-verb="<%= pokus[index].presentPerfect %>" type="text" ></li>
+                <li class="list-group-item"><input id="slovo_ID" data-verb="<%= verb[index].presentPerfect %>" type="text" ></li>
                 <li class="list-group-item">Správná odpověď:</li>
-                <li class="list-group-item answerCard"><%= pokus[index].infinitive %> <%= pokus[index].pastTense %> <%= pokus[index].presentPerfect %></li>
+                <li class="list-group-item answerCard"><%= verb[index].infinitive %> <%= verb[index].pastTense %> <%= verb[index].presentPerfect %></li>
           </ul>
         </div>
 
@@ -126,23 +107,28 @@
   
   <% } %>
 
-  <% createCarousels(0, 10, engVerbs) %>
-  <% createCarousels(11, 20, engVerbs) %>
-  <% createCarousels(21, 30, engVerbs) %>
-  <% createCarousels(31, 40, engVerbs) %>
-  <% createCarousels(41, 50, engVerbs) %>
-  <% createCarousels(51, 60, engVerbs) %>
-  <% createCarousels(61, 70, engVerbs) %>
-  <% createCarousels(71, 80, engVerbs) %>
-  <% createCarousels(81, 90, engVerbs) %>
-  <% createCarousels(91, 100, engVerbs) %>
-  <% createCarousels(101, 110, engVerbs) %>
-  <% createCarousels(111, 120, engVerbs) %>
-  <% createCarousels(121, 130, engVerbs) %>
-  <% createCarousels(131, 140, engVerbs) %>
-  <% createCarousels(141, 150, engVerbs) %>
-  <% createCarousels(151, 160, engVerbs) %>
-  <% createCarousels(161, 173, engVerbs) %>
+<!--
+  FUNCTION CREATES CAROUSEL FOR 10 WORDS FROM JSON FILE
+  *FROM 0 TO 10, 11-20, 21-30 ETC...
+-->
+
+  <% createCarousels(0, 10, deVerben) %>
+  <% createCarousels(11, 20, deVerben) %>
+  <% createCarousels(21, 30, deVerben) %>
+  <% createCarousels(31, 40, deVerben) %>
+  <% createCarousels(41, 50, deVerben) %>
+  <% createCarousels(51, 60, deVerben) %>
+  <% createCarousels(61, 70, deVerben) %>
+  <% createCarousels(71, 80, deVerben) %>
+  <% createCarousels(81, 90, deVerben) %>
+  <% createCarousels(91, 100, deVerben) %>
+  <% createCarousels(101, 110, deVerben) %>
+  <% createCarousels(111, 120, deVerben) %>
+  <% createCarousels(121, 130, deVerben) %>
+  <% createCarousels(131, 140, deVerben) %>
+  <% createCarousels(141, 150, deVerben) %>
+  <% createCarousels(151, 160, deVerben) %>
+  <% createCarousels(161, 173, deVerben) %>
 
 
 

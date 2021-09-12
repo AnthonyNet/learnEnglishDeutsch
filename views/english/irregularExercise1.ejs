@@ -7,36 +7,26 @@
     Vyber lekci
   </button>
   <button class="btn btn-secondary" id="showAllIrregular">Ukaž vše</button>
+
+    <!-- 
+    Create DropdownMenu
+    *its sorted alphabetically by 10 words for 1 menu folder
+  -->
+
+
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 
-    <li class="p-1"><a class="dropdown-item" href="#">1-10</a></li>
-    <li class="p-1"><a class="dropdown-item" href="#">11-20</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">21-30</a></li>
-  </li>
-  <li class="p-1"><a class="dropdown-item" href="#">31-40</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">41-50</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">51-60</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">61-70</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">71-80</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">81-90</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">91-100</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">101-110</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">111-120</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">121-130</a></li>
-    </li>
-    <li class="p-1"><a class="dropdown-item" href="#">131-136</a></li>
-    </li>
+     <% let createEngDropdownMenu = () => { %>
+      <% for(let i=1; i<= 121; i+=10)  {%>
+        <li class="p-1"><a class="dropdown-item" href="#"><%=i%>-<%=i+9%></a></li>
+      <% } %>
+     <% } %>
 
+     <%= createEngDropdownMenu() %>
+
+     <li class="p-1"><a class="dropdown-item" href="#">131-136</a></li>
+
+ 
   </ul>
 </div>
 
@@ -121,6 +111,13 @@
   </div>
   
   <% } %>
+
+
+  <!--
+  FUNCTION CREATES CAROUSEL FOR 10 WORDS FROM JSON FILE
+  *FROM 0 TO 10, 11-20, 21-30 ETC...
+-->
+
 
   <% createCarousels(0, 10, Verbs) %>
   <% createCarousels(11, 20, Verbs) %>
