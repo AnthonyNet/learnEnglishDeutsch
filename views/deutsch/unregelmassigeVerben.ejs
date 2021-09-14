@@ -81,10 +81,35 @@
                 <li class="list-group-item"><input id="slovo_ID" data-verb="<%= verb[index].infinitive %>" type="text"></li>
                 <li class="list-group-item">Präteritum:</li>
                 <li class="list-group-item"><input id="slovo_ID" data-verb="<%= verb[index].pastTense %>" type="text"></li>
+                
+                <%if(verb[index].pastTense2){%>
+                  <li class="list-group-item">Präteritum2:</li>
+                  <li class="list-group-item"><input id="slovo_ID" data-verb="<%= verb[index].pastTense2 %>" type="text"></li>
+                <% } %>
+
                 <li class="list-group-item">Perfektum:</li>
                 <li class="list-group-item"><input id="slovo_ID" data-verb="<%= verb[index].presentPerfect %>" type="text" ></li>
+
+                <%if(verb[index].presentPerfect2){%>
+                  <li class="list-group-item">Perfektum2:</li>
+                  <li class="list-group-item"><input id="slovo_ID" data-verb="<%= verb[index].presentPerfect2 %>" type="text"></li>
+                <% } %>
+
                 <li class="list-group-item">Správná odpověď:</li>
-                <li class="list-group-item answerCard"><%= verb[index].infinitive %> <%= verb[index].pastTense %> <%= verb[index].presentPerfect %></li>
+                <li class="list-group-item answerCard">
+                  <%= verb[index].infinitive %> 
+                  <%= verb[index].pastTense %> 
+
+                  <%if(verb[index].pastTense2){%>
+                  <%= verb[index].pastTense2 %>
+                  <% } %>
+                  
+                  <%= verb[index].presentPerfect %>
+                
+                  <%if(verb[index].presentPerfect2){%>
+                    <%= verb[index].presentPerfect2 %>"
+                    <% } %>
+                </li>
           </ul>
         </div>
 

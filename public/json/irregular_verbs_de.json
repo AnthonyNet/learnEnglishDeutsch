@@ -3,7 +3,8 @@
        {
           "cz":"péct",
           "infinitive":"backen",
-          "pastTense":"backte (buk)",
+          "pastTense":"backte",
+          "pastTense2":"buk",
           "presentPerfect":"gebacken"
        },
        {
@@ -134,7 +135,8 @@
           "presentPerfect":"gedrungen"
        },
        {
-          "cz":"",
+          "cz":"přijmout",
+          "cz2": "uvítat",
           "infinitive":"empfangen",
           "pastTense":"empfing",
           "presentPerfect":"empfangen"
@@ -154,8 +156,10 @@
        {
           "cz":"vyblednout",
           "infinitive":"erbleichen",
-          "pastTense":"erbleichte (erblich)",
-          "presentPerfect":"erbleichte (er},ichen)"
+          "pastTense":"erbleichte",
+          "pastTense2":"erblich",
+          "presentPerfect":"erbleichte",
+          "presentPerfect2":"erblichen"
        },
        {
           "cz":"zhasnout",
@@ -374,7 +378,8 @@
        {
           "cz":"prát se",
           "infinitive":"hauen",
-          "pastTense":"haute (hieb)",
+          "pastTense":"haute ",
+          "pastTense2":"hieb",
           "presentPerfect":"gehauen"
        },
        {
@@ -496,8 +501,10 @@
        {
           "cz":"dojit",
           "infinitive":"melken",
-          "pastTense":"melkte (molk)",
-          "presentPerfect":"gemelkt (gemol},n)"
+          "pastTense":"melkte",
+          "pastTense2":"molk",
+          "presentPerfect":"gemelkt",
+          "presentPerfect2":"gemolken"
        },
        {
           "cz":"měřit",
@@ -614,8 +621,10 @@
        {
           "cz":"vysát",
           "infinitive":"saugen",
-          "pastTense":"saugte (sog)",
-          "presentPerfect":"gesaugt (gesog},)"
+          "pastTense":"saugte",
+          "pastTense2":"sog",
+          "presentPerfect":"gesaugt",
+          "presentPerfect2":"gesogt"
        },
        {
           "cz":"zvládnout",
@@ -625,7 +634,8 @@
           "presentPerfect":"geschaffen"
        },
        {
-          "cz":"",
+          "cz":"rozvést",
+          "cz2":"oddělit",
           "infinitive":"scheiden",
           "pastTense":"schied",
           "presentPerfect":"geschieden"
@@ -707,7 +717,8 @@
           "presentPerfect":"geschlungen"
        },
        {
-          "cz":"",
+          "cz":"mrštit",
+          "cz2": "praštit", 
           "infinitive":"schmeißen",
           "pastTense":"schmiss",
           "presentPerfect":"geschmissen"
