@@ -34,20 +34,35 @@
     <div class="container">
         
   
-            
-        
+  <!-- -----------------------
+    CREATE ALLMIGHTY CAROUSEL 
+  ------------------------- -->           
 
 <% const deVerben = unregelmassigeVerben.verben; %>
 
 <% let createCarousels = (x, y, verb) => { %>
+
   
+  <% /*CREATE CARD TITLE */ %>
+  <%let focus = (data, sign) => { %>
+    <%= data?data:null %>
+    <% } %>
+
+    <% /*CREATE  TRANSLATION Li Elements */ %>
+    <% let focus2=(data, definition) => { %>
+      <% if(data) { %>
+        
+          <li class="list-group-item"><%=definition%></li>
+          <li class="list-group-item"><input id="slovo_ID" data-verb="<%= data %>" type="text"></li>
+
+      <% } %>
+     <% } %>
+
+
 <div class="row mb-5 hideJQ">
   <div class="cover ">
- 
+    <div id="carouselExampleControls<%= y %>" class="carousel slide text-primary p-5    d-flex align-items-center justify-content-center " data-bs-ride="false"   style="height: 90vh;">
 
-
-
-<div id="carouselExampleControls<%= y %>" class="carousel slide text-primary p-5 d-flex align-items-center justify-content-center " data-bs-ride="false" style="height: 90vh;">
     <div class="carousel-inner ">
       <div class="carousel-item active ">
 
@@ -62,72 +77,55 @@
     
     <%  for (let index = x; index <= y; index++) { %>
 
-        <div class="carousel-item">
+      <div class="carousel-item">
 
           <h1 class="text-center">Slovo #<%=index%></h1>
 
             <div class="card cardIrr text-center" style="width: 18rem; margin: 0 auto;" id="<%= verb[index].cz %>">
                 <div class="card-header">
                   <h3 class=" text-primary mb-1"><%= verb[index].cz %>
-                    <%if(verb[index].cz2){%>-
-                      <%=verb[index].cz2%> 
-                    <% } %>
+                  
+                  <%focus(verb[index].cz2, "- ")%>
                   </h3>
                 
             </div>
 
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Infinitive:</li>
-                <li class="list-group-item"><input id="slovo_ID" data-verb="<%= verb[index].infinitive %>" type="text"></li>
-                <li class="list-group-item">Präteritum:</li>
-                <li class="list-group-item"><input id="slovo_ID" data-verb="<%= verb[index].pastTense %>" type="text"></li>
-                
-                <%if(verb[index].pastTense2){%>
-                  <li class="list-group-item">Präteritum2:</li>
-                  <li class="list-group-item"><input id="slovo_ID" data-verb="<%= verb[index].pastTense2 %>" type="text"></li>
-                <% } %>
-
-                <li class="list-group-item">Perfektum:</li>
-                <li class="list-group-item"><input id="slovo_ID" data-verb="<%= verb[index].presentPerfect %>" type="text" ></li>
-
-                <%if(verb[index].presentPerfect2){%>
-                  <li class="list-group-item">Perfektum2:</li>
-                  <li class="list-group-item"><input id="slovo_ID" data-verb="<%= verb[index].presentPerfect2 %>" type="text"></li>
-                <% } %>
+             
+                  <%= focus2(verb[index].infinitive, "Infinitive") %>
+                  <%= focus2(verb[index].pastTense, "Präteritum")%>
+                  <%= focus2(verb[index].pastTense2, "Präteritum 2:") %>
+                  <%= focus2(verb[index].presentPerfect, "Perfektum:")%>
+                  <%= focus2(verb[index].presentPerfect2, "Perfektum 2:") %>
 
                 <li class="list-group-item">Správná odpověď:</li>
                 <li class="list-group-item answerCard">
                   <%= verb[index].infinitive %> 
                   <%= verb[index].pastTense %> 
 
-                  <%if(verb[index].pastTense2){%>
-                  <%= verb[index].pastTense2 %>
-                  <% } %>
-                  
+                  <%=focus(verb[index].pastTense2)%>
                   <%= verb[index].presentPerfect %>
-                
-                  <%if(verb[index].presentPerfect2){%>
-                    <%= verb[index].presentPerfect2 %>"
-                    <% } %>
+                  <%=focus(verb[index].presentPerfect2)%>
+
                 </li>
-          </ul>
+            </ul>
+          </div>
         </div>
 
-  </div>
-
        <% } %>
-    
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls<%= y %>" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls<%= y %>" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  </div>
+
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls<%= y %>" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls<%= y %>" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
   </div>
   
   <% } %>
