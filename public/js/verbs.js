@@ -8,7 +8,7 @@ check.forEach(element => element.addEventListener('input',(e)=>{
    var data = element.getAttribute('data-verb').toString();
    var value = e.target.value;
    if (e.target.value == ""){
-    element.style.border = "none";
+    element.style.border = "1px solid blue";
     element.style.color = "black";
    }
    else if (data.startsWith(value)){
@@ -19,7 +19,15 @@ check.forEach(element => element.addEventListener('input',(e)=>{
       element.style.border = "5px solid red";
       element.style.color = "red";
    }
+
+   if(e.target.value === element.getAttribute('data-verb')){
+      element.style.border = "15px solid green"
+   }
+
+   
 }));
+
+
 
 
 
