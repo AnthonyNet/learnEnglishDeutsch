@@ -1,0 +1,45 @@
+<%- include('../partials/header') %>
+
+<%- include('../partials/navbar') %>
+
+
+
+
+
+<section class=" text-light mt-5">
+    <div class="container">
+        
+  
+            
+        
+
+<% const Verbs = phrasalVerbs.verbs; %>
+
+<% var pokus = (slova) => { %>
+  <% for(const slovo of slova) { %>
+    <div class="card text-center text-primary mb-5">
+      <div class="card-header">
+        <h1>
+        <%= slovo.verb %> </h1>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><%= slovo.examples[0] %></h5>
+
+        <h5><%= slovo.examples[1]?slovo.examples[1]:null%></h5>
+        <a href="#a"  class="btn btn-primary showAnswerPhrasal">Show me answer</a>
+        <p class="card-text text-danger answerPhrasal"><%= slovo.definition %></p>
+      </div>
+     
+    </div>
+  <% } %> 
+<% } %> 
+
+<% pokus(Verbs) %> 
+
+
+</section>
+
+
+
+<%- include('../partials/footer') %>
+

@@ -21,11 +21,15 @@ check.forEach(element => element.addEventListener('input',(e)=>{
    }
 
    if(e.target.value === element.getAttribute('data-verb')){
-      element.style.border = "15px solid green"
+      element.style.border = "4mm ridge rgba(0,181,47,0.9)";
    }
 
    
 }));
+
+
+
+
 
 
 
@@ -60,6 +64,17 @@ check.forEach(element => element.addEventListener('input',(e)=>{
                  $('.hideJQ').removeClass('hide');
              })
           
-   
+            /*
+             
+            */
+             var selector = '.showAnswerPhrasal';
+             var answerPhrasal = '.answerPhrasal';
+
+             $(answerPhrasal).hide();
+
+             $(selector).on('click', function() {
+               
+               $(answerPhrasal).toggle();
+             });
 
 })(jQuery);

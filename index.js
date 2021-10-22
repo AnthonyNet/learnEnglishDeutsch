@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 
 let jsonData = require('./public/json/irregular_verbs.json');
+let phrasalVerbs = require('./public/json/phrasal_verbs.json');
 
 
 let wortschatz1 = require('./public/json/wortschatz1.json');
@@ -35,6 +36,10 @@ app.get('/english/irregularTable', (req, res) => {
 
 app.get('/english/irregularExercise1', (req, res) => {
     res.render('english/irregularExercise1', {jsonData})
+})
+
+app.get('/english/phrasalVerbs', (req, res) => {
+    res.render('english/phrasalVerbs', {phrasalVerbs})
 })
 
 app.get('/deutsch/wortschatz1', (req, res) => {
