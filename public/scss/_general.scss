@@ -2,7 +2,7 @@
     display: none;
 }
 .answerCard{
-   // color: rgba(555,555,555, 0);
+color: rgba(555,555,555, 0);
    font-size: large;
 }
 
@@ -18,12 +18,18 @@
     background-color: var(--color-blue-dark-2);
 }
 
+.hidden{
+    display: none;
+  }
 
+ 
 
 @media (max-width: 545px) { 
-    .card{
+    .cardIrr{
         width:  48vw !important;
+        margin: 0 auto;
     }
+   
     .card input{
         width: 39vw;
     }

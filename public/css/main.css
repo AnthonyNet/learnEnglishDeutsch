@@ -27,6 +27,7 @@
 
 .answerCard {
   color: rgba(255, 255, 255, 0);
+  font-size: large;
 }
 
 .answerCard:hover,
@@ -40,18 +41,19 @@
   background-color: var(--color-blue-dark-2);
 }
 
-@media (max-width: 545px) {
-  .card {
-    width: 48vw !important;
-  }
+.hidden {
+  display: none;
+}
 
+@media (max-width: 545px) {
+  .cardIrr {
+    width: 48vw !important;
+    margin: 0 auto;
+  }
   .card input {
     width: 39vw;
   }
-
   .table {
     font-size: 1rem;
   }
 }
-
-/*# sourceMappingURL=main.css.map */
