@@ -1,4 +1,4 @@
-//import {prvniPokus} from './localStorage.js';
+/*import {prvniPokus} from './localStorage.js';*/
 
 'use strict';
 
