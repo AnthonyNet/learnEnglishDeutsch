@@ -1,7 +1,7 @@
 /* -----------------
 SCOREBOARD in LocalStorage
 ------------------- */
-export function prvniPokus(){
+function prvniPokus(){
 
 
 let total = 0;
@@ -76,3 +76,4 @@ let addTotalScorePoint = () => {
     addTotalScorePoint(); 
 
 }  
+prvniPokus()
