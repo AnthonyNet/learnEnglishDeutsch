@@ -1,4 +1,4 @@
-/*import {prvniPokus} from './localStorage.js';*/
+import {prvniPokus} from './localStorage.js';
 
 
 //Counter show how many good answers in a card you have
