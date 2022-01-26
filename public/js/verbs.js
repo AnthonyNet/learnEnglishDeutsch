@@ -1,6 +1,5 @@
 /*import {prvniPokus} from './localStorage.js';*/
 
-'use strict';
 
 //Counter show how many good answers in a card you have
 let counter = 0;
