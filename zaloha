@@ -63,11 +63,8 @@ check.forEach(element => element.addEventListener('input',(e)=>{
                console.log(score4);
                score4.classList.remove('hidden')
             }*/
-//
-//Druhá verze loopu:
-//
-
-   /*
+         
+   
       for (let i2=0; i2 < iconField.length; i2++) {
          if(counter == 1){
             iconField[i2].firstElementChild.classList.remove('hidden');
@@ -75,7 +72,7 @@ check.forEach(element => element.addEventListener('input',(e)=>{
             iconField[i2].children[1].classList.remove('hidden');
          } else if (counter == 3 ){
             iconField[i2].lastElementChild.classList.remove('hidden');
-         }else{}*/
+         }else{}
             
    }
 

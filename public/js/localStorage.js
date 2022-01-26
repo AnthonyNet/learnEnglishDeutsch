@@ -3,9 +3,6 @@ SCOREBOARD in LocalStorage
 ------------------- */
 export function prvniPokus(){
 
-  const iconZ = document.getElementById('icon');
-  
-  
 
 let total = 0;
 let today = 0;
@@ -50,17 +47,16 @@ let addTotalScorePoint = () => {
     /* -----------------
     Set TotalScore +1
     ------------------- */
+    
+  
+          
+
     const totalScore = function() {
         let allX = document.querySelectorAll('.input_Text')
         allX.forEach(element => element.addEventListener('input',(e)=>{
         if(e.target.value === element.getAttribute('data-verb')){
 
-            let myValue = e.target.value;
-
-            //element.style.border = "4mm ridge rgba(0,181,47,0.9)";
-            iconZ.innerText = "✔"
             
-        
             let data = localStorage.getItem('scoreBoard');
             let dataJSON = JSON.parse(data);
             dataJSON[0].totalScore+=1;
@@ -69,10 +65,12 @@ let addTotalScorePoint = () => {
             localStorage.setItem('scoreBoard', JSON.stringify(dataJSON));
 
             giveMeTotalScore(); 
+            
         }
         else{null}
             }));
-        }(); 
+        }; 
+        totalScore()
 }; 
   
     addTotalScorePoint(); 
