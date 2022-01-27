@@ -1,4 +1,4 @@
-import scoreLocalStorage from './localStorage.js';
+import {scoreLocalStorage} from './localStorage.js';
 
 //const scoreLocalStorage2 = require(scoreLocalStorage).default
 
