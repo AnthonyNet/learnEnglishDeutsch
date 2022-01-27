@@ -1,4 +1,4 @@
-import scoreLocalStorage from './localStorage.js';
+import {scoreLocalStorage} from './localStorage.js';
 
 //const scoreLocalStorage2 = require(scoreLocalStorage).default
 
@@ -40,8 +40,8 @@ check.forEach(element => element.addEventListener('input',(e)=>{
 //
 //Run functions
 
-checkAnswers();
-scoreLocalStorage();
+checkAnswers()
+scoreLocalStorage()
 
 
 
@@ -54,7 +54,7 @@ const phrasalVerbAnswer = () => {
 
    buttonPhrasal.forEach((item) => {
       item.addEventListener('click', (e) => {
-         item.nextElementSibling.classList.toggle('hidden')
+         item.nextElementSibling.classList.toggle('hidden');
       })
    })
 }
@@ -62,20 +62,3 @@ const phrasalVerbAnswer = () => {
 phrasalVerbAnswer();
 
 
-(function($) {
-
-       
-   $('.hideJQ').not(':first').addClass('hide');
-   // Ukaž zvolenou lekci a schovej ostatní
-              $('.dropdown-menu li').on('click',function(){
-               var eq = $(this).index();
-               
-               $('.hideJQ').addClass('hide');
-               $('.hideJQ').eq(eq).removeClass('hide');
-            });
-           
-            $('#showAllIrregular').on('click', function(){
-                $('.hideJQ').removeClass('hide');
-            })
-
-})(jQuery);
