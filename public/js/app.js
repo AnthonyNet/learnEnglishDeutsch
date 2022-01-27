@@ -2,10 +2,8 @@ import {scoreLocalStorage} from './localStorage.js';
 import {checkAnswers, phrasalVerbAnswer} from './verbs.js';
 
 
-
 checkAnswers()
 scoreLocalStorage()
-
 phrasalVerbAnswer()
 
 // Povol Pop up funckci
