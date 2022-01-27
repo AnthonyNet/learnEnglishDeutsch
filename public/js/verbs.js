@@ -1,5 +1,7 @@
 import {scoreLocalStorage} from './localStorage.js';
 
+const scoreLocalStorage2 = require(scoreLocalStorage).default
+
 const checkAnswers = () => {
 
 
@@ -39,7 +41,7 @@ check.forEach(element => element.addEventListener('input',(e)=>{
 //Run functions
 
 checkAnswers();
-scoreLocalStorage();
+scoreLocalStorage2();
 
 
 
