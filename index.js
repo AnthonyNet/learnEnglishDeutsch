@@ -10,6 +10,7 @@ let phrasalVerbs = require('./public/json/phrasal_verbs.json');
 let wortschatz1 = require('./public/json/wortschatz1.json');
 let unregelmassigeVerben = require('./public/json/irregular_verbs_de.json')
 
+
 /*
 app.use(express.static('public'))
 */
@@ -36,7 +37,7 @@ app.get('/english/irregularTable', (req, res) => {
 })
 
 app.get('/english/irregularExercise1', (req, res) => {
-    res.render('english/irregularExercise1', {jsonData})
+    res.render('english/irregularExercise1', {jsonData, js})
 })
 
 app.get('/english/phrasalVerbs', (req, res) => {
