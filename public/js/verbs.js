@@ -38,8 +38,8 @@ check.forEach(element => element.addEventListener('input',(e)=>{
 //
 //Run functions
 
-checkAnswers()
-scoreLocalStorage()
+checkAnswers();
+scoreLocalStorage();
 
 
 
@@ -57,7 +57,23 @@ const phrasalVerbAnswer = () => {
    })
 }
 
-phrasalVerbAnswer()
+phrasalVerbAnswer();
 
 
+(function($) {
 
+       
+
+   // Ukaž zvolenou lekci a schovej ostatní
+              $('.dropdown-menu li').on('click',function(){
+               var eq = $(this).index();
+               
+               $('.hideJQ').addClass('hide');
+               $('.hideJQ').eq(eq).removeClass('hide');
+            });
+           
+            $('#showAllIrregular').on('click', function(){
+                $('.hideJQ').removeClass('hide');
+            })
+
+})(jQuery);

@@ -46,7 +46,7 @@ export const scoreLocalStorage = function prvniPokus(){
         /* -----------------
     function addCardPoint
     ------------------- */
-    let scoreSpan2 = document.querySelectorAll('.scoreSpan2');
+    let scoreSpan = document.querySelectorAll('.scoreSpan');
 
     let giveMeCardScore = (items) => {
         for (let item of items) {
@@ -56,7 +56,7 @@ export const scoreLocalStorage = function prvniPokus(){
         }
         }
     
-        giveMeCardScore(scoreSpan2);
+        giveMeCardScore(scoreSpan);
 
         
         /* -----------------
@@ -77,20 +77,20 @@ export const scoreLocalStorage = function prvniPokus(){
                 dataJSON[0].totalScore+=1;
                 dataJSON[0].cardScore+=1;
 
-                for (let i2=0; i2 < iconSpan2.length; i2++) {
+                for (let i2=0; i2 < iconSpan.length; i2++) {
                     if(dataJSON[0].cardScore == 1){
-                       iconSpan2[i2].firstElementChild.classList.remove('hidden');
+                       iconSpan[i2].firstElementChild.classList.remove('hidden');
                     } else if( dataJSON[0].cardScore == 2 ){
-                       iconSpan2[i2].children[1].classList.remove('hidden');
+                       iconSpan[i2].children[1].classList.remove('hidden');
                     } else if (dataJSON[0].cardScore == 3 ){
-                       iconSpan2[i2].lastElementChild.classList.remove('hidden');
+                       iconSpan[i2].lastElementChild.classList.remove('hidden');
                     }else{}       
                   }
                 
                 localStorage.setItem('scoreBoard', JSON.stringify(dataJSON));
     
                 giveMeTotalScore(spanWithTotalScore); 
-                giveMeCardScore(scoreSpan2); 
+                giveMeCardScore(scoreSpan); 
                 
             }
             else{null}
@@ -105,28 +105,28 @@ export const scoreLocalStorage = function prvniPokus(){
 
 //Counter show how many good answers in a card you have
 
-let scoreSpan2 = document.querySelectorAll('.scoreSpan2');
-let iconSpan2 = document.querySelectorAll('.iconSpan2');
+let scoreSpan = document.querySelectorAll('.scoreSpan');
+let iconSpan = document.querySelectorAll('.iconSpan');
 
 //Get all slide buttons with parrent DIV element
-const nextSlide = document.querySelectorAll('.carousel-control-next');
-const prevSlide = document.querySelectorAll('.carousel-control-prev');
+const nextBtn = document.querySelectorAll('.carousel-control-next');
+const prevBtn = document.querySelectorAll('.carousel-control-prev');
 //Put all slide buttons into an array
-let slidesArray2 = [];
-slidesArray2 = [...prevSlide, ...nextSlide]
+let btnArray = [];
+btnArray = [...prevBtn, ...nextBtn]
     
-    for( let slide2 of slidesArray2){
-        slide2.addEventListener('click', function(){
-            for( let score2 of scoreSpan2){
+//Loop the array of
+    for( let btn of btnArray){
+        btn.addEventListener('click', function(){
+            for( let score of scoreSpan){
 
                 let data = localStorage.getItem('scoreBoard');
                 let dataJSON = JSON.parse(data);
-                score2.innerHTML = dataJSON[0].cardScore = 0
-                
+                score.innerHTML = dataJSON[0].cardScore = 0;
                 
                 localStorage.setItem('scoreBoard', JSON.stringify(dataJSON));
             }
-            for( let icons of iconSpan2){
+            for( let icons of iconSpan){
                 for(let icon of icons.children){
                    icon.classList.add('hidden')
                 }
