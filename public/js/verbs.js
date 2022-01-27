@@ -1,4 +1,4 @@
-import {prvniPokus} from './localStorage.js';
+import {scoreLocalStorage} from './localStorage.js';
 
 
 //Counter show how many good answers in a card you have
@@ -21,10 +21,11 @@ for (let slide of slidesArray){
    slide.addEventListener('click', function(){
       
       for (let score of scoreSpan) {
-         counter = 0;
+       counter = 0;
          score.innerText = counter + "/3";
+        
       }
-
+      
       //1. Loop iconSpan>icons (SVG)
       //2. loop icons>icon
       for( let icons of iconSpan){
@@ -52,6 +53,7 @@ const checkAnswers = () => {
 
 let check = document.querySelectorAll('.input_Text')
 check.forEach(element => element.addEventListener('input',(e)=>{
+   
    var data = element.getAttribute('data-verb').toString();
    var value = e.target.value;
    
@@ -67,7 +69,7 @@ check.forEach(element => element.addEventListener('input',(e)=>{
             // When is answer true change input to READONLY and
             //  add counter +1
             e.target.readOnly = true;
-            counter = counter +1;
+            counter+=1;
 
             
          //LOOP through iconSpan 
@@ -115,7 +117,8 @@ check.forEach(element => element.addEventListener('input',(e)=>{
 //Run functions
 slidesLoop(slidesArray,counter)
 checkAnswers()
-prvniPokus()
+scoreLocalStorage()
+
 
 
   
@@ -123,7 +126,7 @@ prvniPokus()
 
 const phrasalVerbAnswer = () => {
    const buttonPhrasal = document.querySelectorAll('.showAnswerPhrasal');
-   const asnwerPhrasal = document.querySelectorAll('.answerPhrasal');
+   
 
    buttonPhrasal.forEach((item) => {
       item.addEventListener('click', (e) => {
@@ -136,4 +139,3 @@ phrasalVerbAnswer()
 
 
 
-  
