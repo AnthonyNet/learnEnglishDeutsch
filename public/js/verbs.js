@@ -1,4 +1,4 @@
-import {scoreLocalStorage} from './localStorage.js';
+import {scoreLocalStorage as prd} from './localStorage.js';
 
 const checkAnswers = () => {
 
@@ -39,7 +39,8 @@ const checkAnswers = () => {
    //Run functions
    
    checkAnswers()
-   scoreLocalStorage()
+   //scoreLocalStorage()
+   prd()
    
    
    
