@@ -1,4 +1,20 @@
+(function($) {
 
+       
+    $('.hideJQ').not(':first').addClass('hide');
+    // Ukaž zvolenou lekci a schovej ostatní
+               $('.dropdown-menu li').on('click',function(){
+                var eq = $(this).index();
+                
+                $('.hideJQ').addClass('hide');
+                $('.hideJQ').eq(eq).removeClass('hide');
+             });
+            
+             $('#showAllIrregular').on('click', function(){
+                 $('.hideJQ').removeClass('hide');
+             })
+  
+  })(jQuery);
 
 /* -----------------
 SCOREBOARD in LocalStorage
