@@ -76,6 +76,16 @@ export const scoreLocalStorage = function prvniPokus(){
                 let dataJSON = JSON.parse(data);
                 dataJSON[0].totalScore+=1;
                 dataJSON[0].cardScore+=1;
+
+                for (let i2=0; i2 < iconSpan2.length; i2++) {
+                    if(dataJSON[0].cardScore == 1){
+                       iconSpan2[i2].firstElementChild.classList.remove('hidden');
+                    } else if( dataJSON[0].cardScore == 2 ){
+                       iconSpan2[i2].children[1].classList.remove('hidden');
+                    } else if (dataJSON[0].cardScore == 3 ){
+                       iconSpan2[i2].lastElementChild.classList.remove('hidden');
+                    }else{}       
+                  }
                 
                 localStorage.setItem('scoreBoard', JSON.stringify(dataJSON));
     
@@ -96,7 +106,7 @@ export const scoreLocalStorage = function prvniPokus(){
 //Counter show how many good answers in a card you have
 
 let scoreSpan2 = document.querySelectorAll('.scoreSpan2');
-let iconSpan = document.querySelectorAll('.iconSpan');
+let iconSpan2 = document.querySelectorAll('.iconSpan2');
 
 //Get all slide buttons with parrent DIV element
 const nextSlide = document.querySelectorAll('.carousel-control-next');
@@ -116,6 +126,11 @@ slidesArray2 = [...prevSlide, ...nextSlide]
                 
                 localStorage.setItem('scoreBoard', JSON.stringify(dataJSON));
             }
+            for( let icons of iconSpan2){
+                for(let icon of icons.children){
+                   icon.classList.add('hidden')
+                }
+             }
         })
     }    
 
