@@ -59,6 +59,6 @@ const phrasalVerbAnswer = () => {
    })
 }
 
-phrasalVerbAnswer();
+phrasalVerbAnswer()
 
 
