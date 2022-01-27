@@ -1,81 +1,72 @@
 import {scoreLocalStorage} from './localStorage.js';
 
-//const scoreLocalStorage2 = require(scoreLocalStorage).default
-
 const checkAnswers = () => {
 
 
-//For all INPUTS, mark the correct answer by a green INPUT border and the wrong one by red border
-
-let check = document.querySelectorAll('.input_Text')
-check.forEach(element => element.addEventListener('input',(e)=>{
+   //For all INPUTS, mark the correct answer by a green INPUT border and the wrong one by red border
    
-   var data = element.getAttribute('data-verb').toString();
-   var value = e.target.value;
+   let check = document.querySelectorAll('.input_Text')
+   check.forEach(element => element.addEventListener('input',(e)=>{
+      
+      var data = element.getAttribute('data-verb').toString();
+      var value = e.target.value;
+      
+      
+            if (value == ""){
+            element.style.border = "1px solid blue";
+            element.style.color = "black";
+            }
+   
+            else if (data === value){
+               element.style.border = "4mm ridge rgba(0,181,47,0.9)";
+            }
+            //Check letter if is written in correct order
+            //
+            else if (data.startsWith(value)){
+            element.style.color = "green";
+            }
+            
+            else{
+               element.style.border = "5px solid red";
+               element.style.color = "red";  
+            }
+      }))
+   }
    
    
-         if (value == ""){
-         element.style.border = "1px solid blue";
-         element.style.color = "black";
-         }
-
-         else if (data === value){
-            element.style.border = "4mm ridge rgba(0,181,47,0.9)";
-         }
-         //Check letter if is written in correct order
-         //
-         else if (data.startsWith(value)){
-         element.style.color = "green";
-         }
-         
-         else{
-            element.style.border = "5px solid red";
-            element.style.color = "red";  
-         }
-   }))
-};
-
-
-//
-//
-//Run functions
-
-checkAnswers()
-scoreLocalStorage()
-
-
-
-  
-//Show phrasal Verbs
-
-const phrasalVerbAnswer = () => {
-   const buttonPhrasal = document.querySelectorAll('.showAnswerPhrasal');
+   //
+   //
+   //Run functions
    
-
-   buttonPhrasal.forEach((item) => {
-      item.addEventListener('click', (e) => {
-         item.nextElementSibling.classList.toggle('hidden');
+   checkAnswers()
+   scoreLocalStorage()
+   
+   
+   
+     
+   //Show phrasal Verbs
+   
+   const phrasalVerbAnswer = function() {
+      let buttonPhrasal = document.querySelectorAll('.showAnswerPhrasal');
+      
+   /*
+   for( let butt of buttonPhrasal)
+   butt.addEventListener('click', function(){
+      butt.nextElementSibling.classList.toggle('hidden');
+   })*/
+   
+   
+      buttonPhrasal.forEach((item) => {
+         item.addEventListener('click', function(){
+            item.nextElementSibling.classList.toggle('hidden');
+            
+         })
       })
-   })
-}
+   }
+   
+   phrasalVerbAnswer()
 
-phrasalVerbAnswer();
 
 
-(function($) {
 
-       
-   $('.hideJQ').not(':first').addClass('hide');
-   // Ukaž zvolenou lekci a schovej ostatní
-              $('.dropdown-menu li').on('click',function(){
-               var eq = $(this).index();
-               
-               $('.hideJQ').addClass('hide');
-               $('.hideJQ').eq(eq).removeClass('hide');
-            });
-           
-            $('#showAllIrregular').on('click', function(){
-                $('.hideJQ').removeClass('hide');
-            })
 
-})(jQuery);

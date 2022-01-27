@@ -3,8 +3,7 @@
 /* -----------------
 SCOREBOARD in LocalStorage
 ------------------- */
-export const scoreLocalStorage = function prvniPokus(){
-
+export const scoreLocalStorage = () => {
 
     let total = 0;
     let card = 0;
@@ -99,9 +98,9 @@ export const scoreLocalStorage = function prvniPokus(){
                 }));
             }; 
             totalScore()
-    }; 
+    }
       
-        addTotalScorePoint(); 
+        addTotalScorePoint()
 
 
 
@@ -134,7 +133,8 @@ btnArray = [...prevBtn, ...nextBtn]
                 }
              }
         })
-    }    
+    }   
+    
  }  
 
 
