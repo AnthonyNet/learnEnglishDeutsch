@@ -1,6 +1,6 @@
-import {scoreLocalStorage} from './localStorage.js';
 
-const checkAnswers = () => {
+
+ export const checkAnswers = () => {
 
 
    //For all INPUTS, mark the correct answer by a green INPUT border and the wrong one by red border
@@ -38,15 +38,15 @@ const checkAnswers = () => {
    //
    //Run functions
    
-   checkAnswers()
-   scoreLocalStorage()
+ 
+   
    
    
    
      
    //Show phrasal Verbs
    
-   const phrasalVerbAnswer = function() {
+  export  const phrasalVerbAnswer = function() {
       let buttonPhrasal = document.querySelectorAll('.showAnswerPhrasal');
       
    /*
@@ -64,7 +64,7 @@ const checkAnswers = () => {
       })
    }
    
-   phrasalVerbAnswer()
+   
 
 
 /*
