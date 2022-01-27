@@ -1,4 +1,4 @@
-import {scoreLocalStorage} from './localStorage';
+import {scoreLocalStorage} from './localStorage.js';
 
 const checkAnswers = () => {
 
