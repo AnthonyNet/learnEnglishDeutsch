@@ -14,7 +14,6 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 })
 
 (function($) {
-
        
   $('.hideJQ').not(':first').addClass('hide');
   // Ukaž zvolenou lekci a schovej ostatní
@@ -28,5 +27,4 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
            $('#showAllIrregular').on('click', function(){
                $('.hideJQ').removeClass('hide');
            })
-
 })(jQuery);
