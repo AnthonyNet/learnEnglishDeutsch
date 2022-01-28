@@ -66,10 +66,8 @@
    
    
 
-
 /*
    (function($) {
-
        
       $('.hideJQ').not(':first').addClass('hide');
       // Ukaž zvolenou lekci a schovej ostatní
