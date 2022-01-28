@@ -37,7 +37,7 @@ app.get('/english/irregularTable', (req, res) => {
 })
 
 app.get('/english/irregularExercise1', (req, res) => {
-    res.render('english/irregularExercise1', {jsonData, js})
+    res.render('english/irregularExercise1', {jsonData})
 })
 
 app.get('/english/phrasalVerbs', (req, res) => {
