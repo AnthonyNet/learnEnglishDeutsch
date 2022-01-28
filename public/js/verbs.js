@@ -38,7 +38,7 @@
    //
    //Run functions
    checkAnswers()
-   phrasalVerbAnswer()
+  
  
    
    
@@ -65,7 +65,7 @@
       })
    }
    
-   
+   phrasalVerbAnswer()
 
 /*
    (function($) {
