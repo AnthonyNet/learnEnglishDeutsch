@@ -1,6 +1,6 @@
 
 
- export const checkAnswers = () => {
+  const checkAnswers = () => {
 
 
    //For all INPUTS, mark the correct answer by a green INPUT border and the wrong one by red border
@@ -37,7 +37,8 @@
    //
    //
    //Run functions
-   
+   checkAnswers()
+   phrasalVerbAnswer()
  
    
    
@@ -46,7 +47,7 @@
      
    //Show phrasal Verbs
    
-  export  const phrasalVerbAnswer = function() {
+    const phrasalVerbAnswer = function() {
       let buttonPhrasal = document.querySelectorAll('.showAnswerPhrasal');
       
    /*

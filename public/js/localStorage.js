@@ -5,7 +5,7 @@
 /* -----------------
 SCOREBOARD in LocalStorage
 ------------------- */
- export const scoreLocalStorage = () => {
+ const scoreLocalStorage = () => {
 
     let total = 0;
     let card = 0;
@@ -139,4 +139,5 @@ btnArray = [...prevBtn, ...nextBtn]
     
  }  
 
+ scoreLocalStorage()
 
