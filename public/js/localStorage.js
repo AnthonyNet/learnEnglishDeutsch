@@ -139,11 +139,28 @@ const nextBtn = document.querySelectorAll('.carousel-control-next');
 const prevBtn = document.querySelectorAll('.carousel-control-prev');
 //Put all slide buttons into an array
 let btnArray = [];
-btnArray = [...prevBtn, ...nextBtn]
+btnArray = [...prevBtn, ...nextBtn];
+
+let cards = document.querySelectorAll('.cardIrr');
+console.log('locaStorage.js LINE 160');
+console.log('.focus() screws the animation of slides');
+console.log('its not so smooth then');   
     
-//Loop the array of
+//Loop the btnArray 
+//AddEventListener after click focus on first INPUT
+//then set cardScore in LocalStorage to 0
+//then hide STAR ICONS
     for( let btn of btnArray){
         btn.addEventListener('click', function(){
+           // let cards = document.querySelectorAll('.cardIrr');
+
+//.focus() screws the animation of slides
+//its not so smooth then    
+  
+        for(let card of cards){
+        card.querySelectorAll('input')[0].focus()
+        }
+
             for( let score of scoreSpan){
 
                 let data = localStorage.getItem('scoreBoard');
@@ -153,6 +170,8 @@ btnArray = [...prevBtn, ...nextBtn]
                 
                 localStorage.setItem('scoreBoard', JSON.stringify(dataJSON));
             }
+
+            //Hide STAR Icons
             for( let icons of iconSpan){
                 for(let icon of icons.children){
                    icon.classList.add('hidden')
