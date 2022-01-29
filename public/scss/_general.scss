@@ -22,7 +22,9 @@ color: rgba(555,555,555, 0);
     display: none;
   }
 
- 
+ input{
+     text-align: center;
+ }
 
 @media (max-width: 545px) { 
     .cardIrr{

@@ -45,6 +45,10 @@
   display: none;
 }
 
+input {
+  text-align: center;
+}
+
 @media (max-width: 545px) {
   .cardIrr {
     width: 48vw !important;

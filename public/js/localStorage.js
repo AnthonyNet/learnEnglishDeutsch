@@ -64,12 +64,18 @@ SCOREBOARD in LocalStorage
     function addCardPoint
     ------------------- */
     let scoreSpan = document.querySelectorAll('.scoreSpan');
+    let iconSpan = document.querySelectorAll('.iconSpan');
+
+   
 
     let giveMeCardScore = (items) => {
         for (let item of items) {
+           
             let data = localStorage.getItem('scoreBoard');
             let dataJSON = JSON.parse(data);
-            item.innerText = dataJSON[0].cardScore + "/3"
+            item.innerText = "Správně: " + dataJSON[0].cardScore; 
+           
+            
         }
         }
     
@@ -100,7 +106,10 @@ SCOREBOARD in LocalStorage
                     } else if( dataJSON[0].cardScore == 2 ){
                        iconSpan[i2].children[1].classList.remove('hidden');
                     } else if (dataJSON[0].cardScore == 3 ){
-                       iconSpan[i2].lastElementChild.classList.remove('hidden');
+                       iconSpan[i2].children[2].classList.remove('hidden');
+                    }   
+                       else if (dataJSON[0].cardScore == 4 ){
+                        iconSpan[i2].lastElementChild.classList.remove('hidden');
                     }else{}       
                   }
                 
@@ -139,7 +148,8 @@ btnArray = [...prevBtn, ...nextBtn]
 
                 let data = localStorage.getItem('scoreBoard');
                 let dataJSON = JSON.parse(data);
-                score.innerHTML = dataJSON[0].cardScore = 0;
+               /* score.innerText = dataJSON[0].cardScore = 0;*/
+                score.innerText = "Správně: 0";
                 
                 localStorage.setItem('scoreBoard', JSON.stringify(dataJSON));
             }
