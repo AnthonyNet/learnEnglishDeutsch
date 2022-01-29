@@ -4,11 +4,11 @@
 
 
 
-<div class="dropdown text-center mt-5">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+<div class="dropdown  text-center mt-1">
+  <button class="btn btn-secondary dropdown-toggle m-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     Vyber lekci
   </button>
-  <button class="btn btn-secondary" id="showAllIrregular">Ukaž vše</button>
+  <button class="btn btn-secondary m-1" id="showAllIrregular">Ukaž vše</button>
 
     <!-- 
     Create DropdownMenu
@@ -27,10 +27,19 @@
      <%= createEngDropdownMenu() %>
 
      <li class="p-1"><a class="dropdown-item" href="#">131-136</a></li>
+  </ul>
+ 
+</div>
+
+    <!-- ----------
+  totalScore Board 
+------------ -->
+
 
  
-  </ul>
-</div>
+<!-- ----------
+////////////
+------------ -->
 
 
 
@@ -41,7 +50,7 @@
 
 
 
-<section class=" text-light mt-5">
+<section class=" text-light">
     <div class="container">
         
 
@@ -52,18 +61,10 @@
 
 <% let createCarousels = (x, y, verben) => { %>
   
-<div class="row mb-5 hideJQ">
-  <div class="cover ">
+<div class="row mt-1">
+  <div class="cover hideJQ ">
  
-    <!-- ----------
-  totalScore Board 
------------- -->
-<div>  
-  <h1 class="text-center text-danger">Celkové skóre: <span class="totalScore"></span></h1>
-</div>
-<!-- ----------
-////////////
------------- -->
+
 
 
  <!-- ----------
@@ -72,7 +73,7 @@
 <div id="carouselExampleControls<%= y %>" class="carousel slide text-primary p-5 d-flex align-items-center justify-content-center " data-bs-ride="false" data-bs-interval="false"  style="height: 90vh;">
     
   <div>
-    <button class="btn btn-danger position-absolute top-0 end-0 m-2">Další</button>
+    <h1 class="text-center text-danger position-absolute top-0 end-0 m-2">Celkové skóre: <span class="totalScore"></span></h1>
   </div>
   
   <div class="carousel-inner ">
