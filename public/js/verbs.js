@@ -18,8 +18,11 @@
             }
    
             else if (data === value){
+               e.target.readOnly = true;
                element.style.border = "3px ridge rgba(0,181,47,0.9)";
                element.parentElement.style.background = "green";
+               element.style.color = "green";
+              
             }
             //Check letter if is written in correct order
             //
