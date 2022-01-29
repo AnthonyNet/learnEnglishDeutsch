@@ -148,7 +148,7 @@ btnArray = [...prevBtn, ...nextBtn]
 
                 let data = localStorage.getItem('scoreBoard');
                 let dataJSON = JSON.parse(data);
-               /* score.innerText = dataJSON[0].cardScore = 0;*/
+                score.innerText = dataJSON[0].cardScore = 0;
                 score.innerText = "Správně: 0";
                 
                 localStorage.setItem('scoreBoard', JSON.stringify(dataJSON));
