@@ -59,7 +59,9 @@
 
 </section>
 
-
+<!-- ------------
+  CAROUSEL section
+-------------- -->
 <section class=" text-light mt-1">
   <div class="container">
 
@@ -69,13 +71,14 @@
         <div class="cover ">
        
       
-      
+      <!-- ID FAIL change id x to class-->
       
       <div id="carouselExampleControls<%=x%>" class="carousel slide text-primary  p-5 d-flex align-items-center justify-content-center " data-bs-interval="false" style="height: 90vh;">
 
-        <div>
-          <h1 class="text-center text-danger position-absolute top-0 end-0 m-2">Celkové skóre: <span class="totalScore"></span></h1>
-        </div>
+ <!-- Div shows TotalScore from LocalStorage--> 
+  <div>
+    <h1 class="text-center text-danger position-absolute top-0 start-50 translate-middle-x m-2">Celkové skóre: <span class="totalScore"></span></h1>
+  </div>
 
           <div class="carousel-inner ">
             <div class="carousel-item active ">

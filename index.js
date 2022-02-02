@@ -3,16 +3,16 @@ const app = express();
 const path = require('path');
 
 //English JSON
-let jsonData = require('./public/json/irregular_verbs.json');
-let phrasalVerbs = require('./public/json/phrasal_verbs.json');
+let jsonData = require('./views/json/irregular_verbs.json');
+let phrasalVerbs = require('./views/json/phrasal_verbs.json');
 //Deutsch JSON
-let wortschatz1 = require('./public/json/wortschatz1.json');
-let unregelmassigeVerben = require('./public/json/irregular_verbs_de.json')
+let wortschatz1 = require('./views/json/wortschatz1.json');
+let unregelmassigeVerben = require('./views/json/irregular_verbs_de.json')
 
 /*
 app.use(express.static('public'))
 */
-app.use(express.static(__dirname + "/public", {
+app.use(express.static(__dirname + "/views", {
     index: false, 
     immutable: true, 
     cacheControl: true,
@@ -22,6 +22,7 @@ app.use(express.static(__dirname + "/public", {
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'))
+
 
 
 

@@ -150,12 +150,14 @@ console.log('its not so smooth then');
 //AddEventListener after click focus on first INPUT
 //then set cardScore in LocalStorage to 0
 //then hide STAR ICONS
+
     for( let btn of btnArray){
         btn.addEventListener('click', function(){
            // let cards = document.querySelectorAll('.cardIrr');
 
 //.focus() screws the animation of slides
-//its not so smooth then    
+//its not so smooth then  
+///AND ITS NOT WORK FOR LEFT ARROW :((((f
   
         for(let card of cards){
         card.querySelectorAll('input')[0].focus()
@@ -182,5 +184,5 @@ console.log('its not so smooth then');
     
  }  
 
- scoreLocalStorage()
+ export { scoreLocalStorage };
 

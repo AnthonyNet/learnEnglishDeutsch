@@ -37,18 +37,6 @@
       }))
    }
    
-   
-   //
-   //
-   //Run functions
-   checkAnswers()
-  
- 
-   
-   
-   
-   
-     
    //Show phrasal Verbs
    
     const phrasalVerbAnswer = function() {
@@ -69,7 +57,7 @@
       })
    }
    
-   phrasalVerbAnswer()
+  
 
 /*
    (function($) {
@@ -89,3 +77,4 @@
     
     })(jQuery);*/
    
+    export { checkAnswers, phrasalVerbAnswer};
