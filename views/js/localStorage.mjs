@@ -184,5 +184,7 @@ console.log('its not so smooth then');
     
  }  
 
- export { scoreLocalStorage };
+ scoreLocalStorage();
+
+
 

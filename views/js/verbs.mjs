@@ -77,4 +77,5 @@
     
     })(jQuery);*/
    
-    export { checkAnswers, phrasalVerbAnswer};
+   checkAnswers();
+   phrasalVerbAnswer();
