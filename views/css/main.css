@@ -51,13 +51,34 @@ input {
 
 @media (max-width: 545px) {
   .cardIrr {
-    width: 48vw !important;
-    margin: 0 auto;
+    width: 48vw  !important;
   }
   .card input {
     width: 39vw;
   }
   .table {
     font-size: 1rem;
+  }
+  .total-score {
+    font-size: 5vw;
+  }
+  .carousel-item h1,
+  .card-header h3,
+  .list-group-item {
+    font-size: 4vw;
+    padding: 0.6vh;
+  }
+}
+
+@media (max-height: 820px) {
+  .total-score {
+    font-size: 3vh;
+  }
+  .carousel-item h1 {
+    display: none;
+  }
+  .card-header h3,
+  .list-group-item {
+    padding: 0.3vh;
   }
 }
