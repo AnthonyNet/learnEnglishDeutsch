@@ -3,7 +3,7 @@
   const checkAnswers = () => {
 
 
-   //For all INPUTS, mark the correct answer by a green INPUT border and the wrong one by red border
+   //For all INPUTS, mark the correct answer by a green INPUT border and the wrong one by a red border
    
    let check = document.querySelectorAll('.input_Text')
    check.forEach(element => element.addEventListener('input',(e)=>{
@@ -37,18 +37,11 @@
       }))
    }
    
-   //Show phrasal Verbs
+   //Show/hide toggle Phrasal Verbs answer´s button
    
     const phrasalVerbAnswer = function() {
       let buttonPhrasal = document.querySelectorAll('.showAnswerPhrasal');
-      
-            /*
-            for( let butt of buttonPhrasal)
-            butt.addEventListener('click', function(){
-               butt.nextElementSibling.classList.toggle('hidden');
-            })*/
             
-   
       buttonPhrasal.forEach((item) => {
          item.addEventListener('click', function(){
             item.nextElementSibling.classList.toggle('hidden');
@@ -57,25 +50,7 @@
       })
    }
    
-  
 
-/*
-   (function($) {
-       
-      $('.hideJQ').not(':first').addClass('hide');
-      // Ukaž zvolenou lekci a schovej ostatní
-                 $('.dropdown-menu li').on('click',function(){
-                  var eq = $(this).index();
-                  
-                  $('.hideJQ').addClass('hide');
-                  $('.hideJQ').eq(eq).removeClass('hide');
-               });
-              
-               $('#showAllIrregular').on('click', function(){
-                   $('.hideJQ').removeClass('hide');
-               })
-    
-    })(jQuery);*/
    
    checkAnswers();
    phrasalVerbAnswer();

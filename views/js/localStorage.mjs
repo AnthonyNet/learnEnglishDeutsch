@@ -203,15 +203,15 @@ console.log('its not so smooth, fix it');
             }
 
             //3. Hide STAR Icons
+        /*
             for( let icons of iconSpan){
                 for(let icon of icons.children){
                     icon.classList.add('hidden')
                 }
-                }
+                }*/
         })
-    }   
-    
- }  
+     }   
+    }
 
  scoreLocalStorage();
 
