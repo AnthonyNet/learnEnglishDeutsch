@@ -42,12 +42,12 @@
     const phrasalVerbAnswer = function() {
       let buttonPhrasal = document.querySelectorAll('.showAnswerPhrasal');
       
-   /*
-   for( let butt of buttonPhrasal)
-   butt.addEventListener('click', function(){
-      butt.nextElementSibling.classList.toggle('hidden');
-   })*/
-   
+            /*
+            for( let butt of buttonPhrasal)
+            butt.addEventListener('click', function(){
+               butt.nextElementSibling.classList.toggle('hidden');
+            })*/
+            
    
       buttonPhrasal.forEach((item) => {
          item.addEventListener('click', function(){

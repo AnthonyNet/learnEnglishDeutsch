@@ -69,13 +69,13 @@ SCOREBOARD in LocalStorage
    
 
     let giveMeCardScore = (items) => {
+
+   
         for (let item of items) {
            
             let data = localStorage.getItem('scoreBoard');
             let dataJSON = JSON.parse(data);
-            item.innerText = "Správně: " + dataJSON[0].cardScore; 
-           
-            
+            item.innerText = "Správně: " + dataJSON[0].cardScore;   
         }
         }
     
@@ -86,12 +86,12 @@ SCOREBOARD in LocalStorage
         Set TotalScore +1
         ------------------- */
         
-      
-              
-    
         const totalScore = function() {
+            //Select All Inputs
             let allX = document.querySelectorAll('.input_Text')
             allX.forEach(element => element.addEventListener('input',(e)=>{
+             //Data Verb is correct answer  
+             //if input value === correct answer 
             if(e.target.value === element.getAttribute('data-verb')){
     
                 
@@ -100,6 +100,7 @@ SCOREBOARD in LocalStorage
                 dataJSON[0].totalScore+=1;
                 dataJSON[0].cardScore+=1;
 
+                //This loop checks cardScore number and for each number from 1-3 add one Star.
                 for (let i2=0; i2 < iconSpan.length; i2++) {
                     if(dataJSON[0].cardScore == 1){
                        iconSpan[i2].firstElementChild.classList.remove('hidden');
@@ -134,7 +135,7 @@ SCOREBOARD in LocalStorage
 let scoreSpan = document.querySelectorAll('.scoreSpan');
 let iconSpan = document.querySelectorAll('.iconSpan');
 
-//Get all slide buttons with parrent DIV element
+//Get all slide buttons
 const nextBtn = document.querySelectorAll('.carousel-control-next');
 const prevBtn = document.querySelectorAll('.carousel-control-prev');
 //Put all slide buttons into an array
@@ -144,25 +145,53 @@ btnArray = [...prevBtn, ...nextBtn];
 let cards = document.querySelectorAll('.cardIrr');
 console.log('locaStorage.js LINE 160');
 console.log('.focus() screws the animation of slides');
-console.log('its not so smooth then');   
-    
-//Loop the btnArray 
-//AddEventListener after click focus on first INPUT
-//then set cardScore in LocalStorage to 0
-//then hide STAR ICONS
+console.log('its not so smooth, fix it');   
 
+    // RESTART EACH CARD TO DEFAULT
+    //Setu up Input´s values in each card to empty  
+        //& Input background to transparent
+        //& readOnly input to false
+
+    const inputs = document.querySelectorAll('.input_Text')  
+    const restartCard = function(){
+        btnArray.map(btn=>{
+            btn.addEventListener('click', function(){
+               /* const inputs = document.querySelectorAll('.input_Text')  */
+                inputs.forEach(input=>{
+
+                input.value=""
+                input.parentElement.style.background = "transparent";
+                input.readOnly = false;
+            })
+        })
+    })
+    }();
+
+
+    
+  /*
+    Loop the btnArray 
+    1. AddEventListener after click focus on first INPUT
+    2. Set cardScore in LocalStorage to 0
+    3. Hide STAR ICONS
+  */
+   
+        
     for( let btn of btnArray){
         btn.addEventListener('click', function(){
-           // let cards = document.querySelectorAll('.cardIrr');
+           
+            /*
+            focus() screws the animation of slides
+            its not so smooth  
+            AND IT DOESN´T WORK FOR LEFT ARROW :((
+            */    
+            
+            //1.Autofocus on first Input in each Card
+            for(let card of cards){
+            card.querySelectorAll('input')[0].focus()
+            }
 
-//.focus() screws the animation of slides
-//its not so smooth then  
-///AND ITS NOT WORK FOR LEFT ARROW :((((f
-  
-        for(let card of cards){
-        card.querySelectorAll('input')[0].focus()
-        }
-
+            //2.Set score in LS to 0
             for( let score of scoreSpan){
 
                 let data = localStorage.getItem('scoreBoard');
@@ -173,12 +202,12 @@ console.log('its not so smooth then');
                 localStorage.setItem('scoreBoard', JSON.stringify(dataJSON));
             }
 
-            //Hide STAR Icons
+            //3. Hide STAR Icons
             for( let icons of iconSpan){
                 for(let icon of icons.children){
-                   icon.classList.add('hidden')
+                    icon.classList.add('hidden')
                 }
-             }
+                }
         })
     }   
     

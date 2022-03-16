@@ -1,5 +1,5 @@
 
-// Povol Pop up funckci
+// Allow po Up Function
 
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
 var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
