@@ -49,6 +49,26 @@ input {
   text-align: center;
 }
 
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: transparent;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: transparent;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: transparent;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: transparent;
+}
+
 @media (max-width: 545px) {
   .cardIrr {
     width: 48vw  !important;
@@ -68,6 +88,9 @@ input {
     font-size: 4vw;
     padding: 0.6vh;
   }
+  .text-center {
+    font-size: 5vw;
+  }
 }
 
 @media (max-height: 820px) {
@@ -80,5 +103,24 @@ input {
   .card-header h3,
   .list-group-item {
     padding: 0.3vh;
+  }
+  .hideMobile {
+    display: none;
+  }
+  ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: black;
+  }
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: black;
+  }
+  :-ms-input-placeholder {
+    /* IE 10+ */
+    color: black;
+  }
+  :-moz-placeholder {
+    /* Firefox 18- */
+    color: black;
   }
 }

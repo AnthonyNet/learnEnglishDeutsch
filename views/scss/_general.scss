@@ -26,6 +26,19 @@ color: rgba(555,555,555, 0);
      text-align: center;
  }
 
+ ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: transparent;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: transparent;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: transparent;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: transparent;
+  }
+
 @media (max-width: 545px) { 
     .cardIrr{
         width:  48vw  !important;
@@ -47,6 +60,10 @@ color: rgba(555,555,555, 0);
         font-size: 4vw;   
         padding: 0.6vh;   
     }
+
+    .text-center{
+        font-size: 5vw;
+    }
     
 }
 
@@ -58,9 +75,26 @@ color: rgba(555,555,555, 0);
 
     .card-header h3,
     .list-group-item{
-        padding: 0.3vh;  
-        
+        padding: 0.3vh;    
+    }
+
+    .hideMobile{
+      display: none;
+  }
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: black;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: black;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      color: black;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      color: black;
     }
 
 }
+
+
 

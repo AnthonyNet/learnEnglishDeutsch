@@ -29,8 +29,6 @@ phrasalAnswer();
 
 let[iconSpan, nextBtn, prevBtn] = document.querySelectorAll(['.iconSpan','.carousel-control-next', '.carousel-control-prev'])
 
-/*let btnArray= [];
-btnArray=[...iconSpan];
+console.log(iconSpan);
+console.log(nextBtn);
 
-console.log(btnArray);*/
-console.log(iconSpan)
