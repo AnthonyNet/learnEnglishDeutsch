@@ -2,12 +2,14 @@ const express = require("express");
 const app = express();
 const path = require('path');
 
+
+
 //English JSON
-let jsonData = require('./views/json/irregular_verbs.json');
-let phrasalVerbs = require('./views/json/phrasal_verbs.json');
+const jsonData = require('./views/json/irregular_verbs.json');
+const phrasalVerbs = require('./views/json/phrasal_verbs.json');
 //Deutsch JSON
-let wortschatz1 = require('./views/json/wortschatz1.json');
-let unregelmassigeVerben = require('./views/json/irregular_verbs_de.json')
+const wortschatz1 = require('./views/json/wortschatz1.json');
+const unregelmassigeVerben = require('./views/json/irregular_verbs_de.json')
 
 /*
 app.use(express.static('public'))
@@ -43,6 +45,7 @@ app.get('/english/irregularExercise1', (req, res) => {
 app.get('/english/phrasalVerbs', (req, res) => {
     res.render('english/phrasalVerbs', {phrasalVerbs})
 })
+
 
 app.get('/deutsch/wortschatz1', (req, res) => {
     res.render('deutsch/wortschatz1', {wortschatz1})

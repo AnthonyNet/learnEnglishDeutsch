@@ -7,13 +7,10 @@
 
 
 <section class=" text-light mt-5">
-   
-            
-        
 
 <% const Verbs = phrasalVerbs.verbs; %>
 
-<% var pokus = (slova) => { %>
+<% const createCard = (slova) => { %>
   
   <% for(const slovo of slova) { %>
     <div class="card phrasalCard text-center text-primary mb-5">
@@ -33,7 +30,7 @@
   <% } %> 
 <% } %> 
 
-<% pokus(Verbs) %> 
+<% createCard(Verbs) %> 
 
 
 </section>

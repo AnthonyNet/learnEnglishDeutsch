@@ -44,19 +44,19 @@
 
   
   <% /*CREATE CARD TITLE */ %>
-  <%let focus = (data, sign) => { %>
+  <%const focus = (data, sign) => { %>
     <%= data?data:null %>
     <% } %>
 
-    <% /*CREATE  TRANSLATION Li Elements */ %>
-    <% let focus2=(data, definition) => { %>
-      <% if(data) { %>
-        
-          <li class="list-group-item hideMobile"><%=definition%></li>
-          <li class="list-group-item"><input class="input_Text" placeholder="<%=definition%>"data-verb="<%= data %>" type="text"></li>
+  <% /*CREATE  TRANSLATION Li Elements */ %>
+  <% const focus2=(data, definition) => { %>
+    <% if(data) { %>
+      
+        <li class="list-group-item hideMobile"><%=definition%></li>
+        <li class="list-group-item"><input class="input_Text" placeholder="<%=definition%>"data-verb="<%= data %>" type="text"></li>
 
-      <% } %>
-     <% } %>
+    <% } %>
+  <% } %>
 
 
 <div class="row mb-1 hideJQ">
